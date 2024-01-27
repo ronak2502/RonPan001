@@ -73,7 +73,7 @@ This project includes a machine learning model for text classification and a Fla
   - Configures the entry point to run a Bash script named `run.sh`.
 
 
-### Follow these steps to run the model on your local machine.
+## Follow these steps to run the model on your local machine.
 
 ## Clone the Repository
 - git clone https://github.com/ronak2502/RonPan001.git
