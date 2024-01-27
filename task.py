@@ -14,14 +14,12 @@ nltk.download('stopwords')
 
 
 #Please change your database location
+# If automatically not working then please use manualy csv_file_path
+# csv_file_path = '/home/hp/Practice/sample_data.csv'
 current_dir = os.getcwd()
 
 relative_path = 'sample_data.csv'
 csv_file_path = os.path.join(current_dir, relative_path)
-
-# If automatically not working then please use manualy csv_file_path
-# csv_file_path = '/home/hp/Practice/sample_data.csv'
-
 data = pd.read_csv(csv_file_path)
 
 # Preprocess text data
@@ -63,16 +61,15 @@ print("Accuracy:", accuracy_score(y_test, predictions))
 print("Classification Report:\n", classification_report(y_test, predictions))
 
 # Save the model and vectorizer
+# If automatically path is not working then please use manualy path
+# model_file_path = '/home/hp/Practice/model.bin'
+# vectorizer_file_path = '/home/hp/Practice/vectorizer.bin'
+
 model_path = 'model.bin'
 vectorizer_file_path = 'vectorizer.bin'
 
 model_file_path = os.path.join(current_dir, model_path)
 vectorizer_file_path = os.path.join(current_dir, vectorizer_file_path)
-
-# If automatically path is not working then please use manualy path
-# model_file_path = '/home/hp/Practice/model.bin'
-# vectorizer_file_path = '/home/hp/Practice/vectorizer.bin'
-
 joblib.dump(model, model_file_path)
 joblib.dump(vectorizer, vectorizer_file_path)
 

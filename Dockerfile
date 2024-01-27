@@ -11,5 +11,6 @@ COPY . /app
 RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 80
 
+ENTRYPOINT ["bash", "run.sh"]
 #run the REST API
-CMD ["python3", "app.py"]
+# CMD ["python3", "app.py"]
